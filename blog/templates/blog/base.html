@@ -17,6 +17,9 @@
 </head>
 <body>
   <nav class="container-fluid navbar sticky-top navbar-light bg-light">
+    {% if user.is_authenticated %}
+    <a href="{% url 'post_new' %}"><span class="glyphicon glyphicon-plus">dddd</span></a>
+    {% endif %}
   </nav>
   <div class="container-fluid red hero">
     <div class="container">
