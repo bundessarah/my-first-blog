@@ -1,0 +1,84 @@
+body{
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.4em;
+  color: #202020;
+  background-color: #F77575;
+}
+
+.navbar{
+  min-height: 12vh;
+}
+
+.hero{
+  padding-top: 15vh;
+  padding-bottom: auto;
+}
+
+.top-buffer{
+  padding-top: 5vh;
+}
+.title{
+  color: #FFFFFF;
+  font-size: 4rem;
+  font-weight: 900;
+}
+.subtitle{
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+}
+
+.bright{
+  background-color: #FFFFFF;
+}
+.red{
+  background-color: #F77575;
+}
+.orange{
+  background-color: #e6a56a;
+}
+.gray{
+  background-color: #EEEEEE;
+}
+.pink{
+  background-color: #eea7a7;
+}
+
+.highlight{
+  color: #eea7a7;
+  font-size: 1.2rem;
+  padding-left: 2rem;
+  font-family: "Playfair Display";
+  font-weight: bold;
+}
+.giftig-name{
+  font-family: "Playfair Display";
+  font-weight: bold;
+  color: #F77575;
+}
+
+.button-prim{
+  font-weight: bolder;
+  padding:2rem;
+  border-radius: 3rem 3rem 0 0;
+  background-color: #FFFFFF;
+  color: #F77575;
+  text-decoration: underline;
+}
+.button-prim:hover{
+  color: #eea7a7;
+}
+.button-sec{
+  font-weight: bolder;
+  padding:2rem 0;
+  border-radius: 3rem 3rem 0 0;
+  border-width: 2px 2px 0 0;
+  border-color: #FFFFFF;
+  background-color: #F77575;
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+.button-sec:hover{
+  color: #EEEEEE;
+}

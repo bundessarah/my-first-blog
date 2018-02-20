@@ -1,23 +1,107 @@
-<html>
-    <head>
-        <title>Django Girls blog</title>
-    </head>
-    <body>
-        <div>
-            <h1><a href="/">Django Girls Blog</a></h1>
-        </div>
-        {% for post in posts %}
-        <div>
-          <p>
-            published: {{ post.published_date }}
-          </p>
-          <h1>
-          <a href="">{{ post.title }}</a></h1>
-          <p>
-            {{ post.text|linebreaksbr}}
-          </p>
-        </div>
-        {% endfor %}
+{% extends 'blog/base.html' %}
 
-    </body>
-</html>
+{% block content%}
+<h2>
+  Upcoming Giftigs
+</h2>
+<ol>
+  <li>
+    <p>
+      <span class="giftig-name">
+        Late Winter Pick-me-up
+      </span>
+      It’s dark and cold outside, or maybe life just is. Are you in need of some serious complimenting? And did you know that elevating others will make you feel better yourself? If you didn’t, take this as an exercise to find the best in people. Jot down an insecurity or something that’s been bumming you out lately, and receive a verbal hug from a friend-twice-removed who doesn’t know you that well and thus can objectively judge that you’re awesome.
+    </p>
+    <p class="signup">
+      Signups open: February 22nd. Signups close: February 28th. Send your gift by: March 7th.
+    </p>
+  </li>
+  <li>
+    <p>
+      <span class="giftig-name">
+        “Start Something” Spring
+      </span>
+      Things are warming up (or cooling down, depending on where you are in the world), things are changing (unless you live nearby the equator), things are just ready to be tackled (anywhere!). This is the time to pass on your favorite pastime, to lay those seedlings to rest in a pretty flowerpot, or to spend hours making a map of your giftee’s city’s most secret independent movie theaters with some tickets attached. Be inspiring, be inspired.
+    </p>
+    <p class="signup">
+      Signups open: March 25th. Signups close: March 31st. Send your gift by: April 7th.
+    </p>
+  </li>
+  <li>
+    <p>
+      <span class="giftig-name">
+        Solicited Advice
+      </span>
+      What’s something you wish you’d known sooner? Some learned-it-the-hard-way advice you always shell out after your seventh beer? Share those stories if you wish, tailor your words to your giftee’s life situation, feel like the knowledgable person you truly are inside, and become even more street-smart when you find the wisdom your gifter’s life has bestowed upon them.
+    </p>
+    <p class="signup">
+      Signups open: April 24th. Signups close: April 30th. Send your gift by: May 7th.
+    </p>
+  </li>
+  <li>
+    <p>
+      <span class="giftig-name">
+        Early Summer Reading
+      </span>
+      Bestselling book or academic article, paw-printed poetry or TED talk transcript - what’s something you want your giftee to read? What changed your life or currently is in the process of doing so? Which piece of writing made you feel something you’ve never felt before and haven’t since? Share it, and be sure to receive something thought- and/or emotion-provoking yourself.
+    </p>
+    <p class="signup">
+      Coming soon.
+    </p>
+  </li>
+  <li>
+    <p>
+      <span class="giftig-name">
+        Would you use my business idea?
+      </span>
+      This one’s for the entrepreneurs and those who’ve been carrying this one odd idea around with them for years. It’s simple. You pitch your idea to your gifter in your form, and they give you their honest feedback as to why they would or wouldn’t use it. In turn, you offer your giftee your own insights. Bonus points if you go around asking more people, or find someone in their target group if you aren’t.
+    </p>
+    <p class="signup">
+      Coming soon.
+    </p>
+  </li>
+  <li>
+    <p>
+      <span class="giftig-name">
+        Snacks galore
+      </span>
+      Do you get the munchies? I bet you do. This Giftig’s got you covered. It has all the snacks, from dried pork that can stink up an entire Chinese passenger train to raw green hemp protein bars, from oil-dripping kettle chips to something that is not very oily but that I currently can’t think of because now I want those kettle chips. Food allergies, level 5 veganism and no-carb diets make this one all the more fun.
+      </p>
+    <p class="signup">
+      Coming soon.
+    </p>
+  </li>
+  <li>
+    <p>
+      <span class="giftig-name">
+        Hear my cause!
+      </span>
+      What’s a charitable cause you care for? This low-commitment Giftig is your chance at telling your giftee where they should be directing their personal charity and why. Savior of the animals? Supporter of psychodelics-assisted therapy? Happy soup kitchen worker? Effective Altruist? Let of giftee know and challenge them to support your cause, be it with money, time, or attention. Did your gifter convince you? Let them know in the thank-you note.
+    </p>
+    <p class="signup">
+      Coming soon.
+    </p>
+  </li>
+</ul>
+
+
+
+</div>
+</div>
+
+  <div>
+      <h1><a href="/">Django Girls Blog</a></h1>
+  </div>
+  {% for post in posts %}
+  <div>
+    <p>
+      published: {{ post.published_date }}
+    </p>
+    <h1>
+    <a href="{% url "post_detail" pk=post.pk %}">{{ post.title }}</a></h1>
+    <p>
+      {{ post.text|linebreaksbr}}
+    </p>
+  </div>
+  {% endfor %}
+{% endblock %}
